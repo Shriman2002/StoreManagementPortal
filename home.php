@@ -47,7 +47,13 @@
   <h1>Store Database Menu</h1>  
 
   <a href="users-db.php">Click to view the Users database</a> <br>
-  <a href="product-db.php">Click to view the Product database</a>
+  <a href="product-db.php">Click to view the Product database</a><br>
+  <a href="store-db.php">Click to view the Store database</a><br>
+  <a href="manufacturer-db.php">Click to view the Manufacturer database</a><br>
+  <a href="transactions-db.php">Click to view the Transactions database</a><br>
+  <a href="instore_transactions-db.php">Click to view the Instore Transactions database</a><br>
+  <a href="online_transactions-db.php">Click to view the Online Transactions database</a><br>
+  <a href="delivery_costs-db.php">Click to view the Delivery Costs database</a><br>
 
 
 
