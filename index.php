@@ -1,6 +1,9 @@
 <?php
 switch (@parse_url($_SERVER['REQUEST_URI'])['path']) {
    case '/':                   // URL (without file name) to a default screen
+      require 'login.php';
+      break;
+   case '/home.php':                   // URL (without file name) to a default screen
       require 'home.php';
       break; 
    case '/users-db.php':     // if you plan to also allow a URL with the file name 
