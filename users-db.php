@@ -102,7 +102,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST'){
                 <form action="users-db.php" method="post">
                     <input type="submit" name="actionBtn" value="Delete" class ="btn btn-danger" />
                     <input type="hidden" name="user_to_delete" 
-                        value="<?php echo $item['Name']; ?>" />
+                        value="<?php echo $item['EmployeeID']; ?>" />
                 </form>
             </td>
 

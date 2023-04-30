@@ -1,5 +1,6 @@
 <?php
 
+
 function addPurchase($ManufacturerID, $StoreID)
 {
     global $db; 
@@ -9,6 +10,7 @@ function addPurchase($ManufacturerID, $StoreID)
     $statement->bindValue(':StoreID', $StoreID);
     $statement->execute();
     $statement->closeCursor();
+
 }
 
 

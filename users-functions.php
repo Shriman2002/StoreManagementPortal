@@ -74,7 +74,7 @@ function deleteUser($user_to_delete)
     //db
     global $db;
     //query
-    $query = "delete from User where name=:user_to_delete";
+    $query = "delete from User where EmployeeID=:user_to_delete";
     //prepeare
     $statement = $db->prepare($query);
     $statement->bindValue(':user_to_delete', $user_to_delete);
