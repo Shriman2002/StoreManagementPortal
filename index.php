@@ -29,7 +29,16 @@ switch (@parse_url($_SERVER['REQUEST_URI'])['path']) {
       break; 
    case '/delivery_costs-db.php':     // if you plan to also allow a URL with the file name 
       require 'delivery_costs-db.php';
-      break;     
+      break;   
+   case '/sells-db.php':     // if you plan to also allow a URL with the file name 
+      require 'sells-db.php';
+      break;      
+   case '/makes-db.php':     // if you plan to also allow a URL with the file name 
+      require 'makes-db.php';
+      break; 
+   case '/buys_from-db.php':     // if you plan to also allow a URL with the file name 
+      require 'buys_from-db.php';
+      break; 
    default:
       http_response_code(404);
       exit('Not Found');

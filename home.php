@@ -54,6 +54,11 @@
   <a href="instore_transactions-db.php">Click to view the Instore Transactions database</a><br>
   <a href="online_transactions-db.php">Click to view the Online Transactions database</a><br>
   <a href="delivery_costs-db.php">Click to view the Delivery Costs database</a><br>
+  <a href="sells-db.php">Click to view each Store's Inventory database</a><br>
+  <a href="makes-db.php">Click to view each Manufacturer's product database</a><br>
+  <a href="buys_from-db.php">Click to view which store each Manufacturer buys from</a><br>
+
+
 
 
 
