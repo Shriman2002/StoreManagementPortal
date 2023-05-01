@@ -1,3 +1,12 @@
+<?php
+session_start();
+
+if (isset($_GET['code'])) {
+    $_SESSION['loggedIn'] = true;
+}
+
+?>
+
 <!-- 1. create HTML5 doctype -->
 <!DOCTYPE html>
 <html>

@@ -1,13 +1,29 @@
 <?php
+
+session_start();
+
+$loggedIn = $_SESSION['loggedIn'];
+
 // Remember to start the database server (or GCP SQL instance) before trying to connect to it
 ////////////////////////////////////////////
 
 // /** S23, PHP (on Google Standard App Engine) connect to MySQL instance (GCP) **/
-$username = 'root';                       // or your username
-$password = 'passworduva';     
-$host = 'cs4750db-380303:us-east4:db-demo';       // e.g., 'cs4750:us-east4:db-demo'; 
-$dbname = 'storeManagementPortal';           // e.g., 'guestbook';
-$dsn = "mysql:unix_socket=/cloudsql/cs4750db-380303:us-east4:db-demo;dbname=storeManagementPortal";
+if($loggedIn === true){
+   $username = 'root';                       // or your username
+   $password = 'passworduva';     
+   $host = 'cs4750db-380303:us-east4:db-demo';       // e.g., 'cs4750:us-east4:db-demo'; 
+   $dbname = 'storeManagementPortal';           // e.g., 'guestbook';
+   $dsn = "mysql:unix_socket=/cloudsql/cs4750db-380303:us-east4:db-demo;dbname=storeManagementPortal";
+}
+
+else {
+   $username = 'restricted';                       // or your username
+   $password = 'passworduva';     
+   $host = 'cs4750db-380303:us-east4:db-demo';       // e.g., 'cs4750:us-east4:db-demo'; 
+   $dbname = 'storeManagementPortal';           // e.g., 'guestbook';
+   $dsn = "mysql:unix_socket=/cloudsql/cs4750db-380303:us-east4:db-demo;dbname=storeManagementPortal";
+}
+
 //--------- to test, include app.yaml with the following code
 // runtime: php74
 // entrypoint: serve connect-db.php

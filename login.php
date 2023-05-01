@@ -1,7 +1,7 @@
 <?php
-require_once 'vendor/autoload.php';
-
 session_start();
+
+require_once 'vendor/autoload.php';
 
 $clientID = '346526762075-qjvsnli3jh5an4pjrt131lgjibjem5ij.apps.googleusercontent.com';
 $clientSecret = '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';
@@ -13,32 +13,28 @@ $client->setClientSecret($clientSecret);
 $client->setRedirectUri($redirectUrl);
 $client->addScope('profile');
 $client->addScope('email');
-$client->setHostedDomain('virginia.edu'); // Add this line
+$client->setHostedDomain('virginia.edu');
+
+// Initialize the loggedIn variable to false
+$_SESSION['loggedIn'] = false;
 
 if (isset($_GET['code'])) {
-    $client->authenticate($_GET['code']);
-    $accessToken = $client->getAccessToken();
-    $client->setAccessToken($accessToken);
+    echo "Inside the code block.<br>"; 
 
-    $service = new Google_Service_Oauth2($client);
-    $userinfo = $service->userinfo->get();
-    
-    $email = $userinfo->email;
-    $emailDomain = substr($email, strpos($email, '@') + 1);
-    
+    $token = $client->fetchAccessTokenWithAuthCode($_GET['code']);
+    $client->setAccessToken($token['access_token']);
 
-    if ($emailDomain === 'virginia.edu') {
-        $token = $client->fetchAccessTokenWithAuthCode($_GET['code']);
-        $_SESSION['access_token'] = $token['access_token'];
-        // User with 'virginia.edu' email is allowed to log in
-        // Do your logic here, e.g. store user data, set session, etc.
-        header("Location: " . $redirectUrl); // Redirect to the desired page
-        exit;
-    } else {
-        // User with non-'virginia.edu' email is not allowed to log in
-        echo "Access restricted. Please log in with a 'virginia.edu' email.";
+    // Verify if the token is valid
+    if ($client->getAccessToken()) {
+        // Get user profile information
+        $google_oauth = new Google_Service_Oauth2($client);
+        $google_account_info = $google_oauth->userinfo->get();
+
+        // Set the loggedIn variable to true
+        $_SESSION['loggedIn'] = true;
     }
 } else {
     echo "<a href='" . $client->createAuthUrl() . "'>Login with Google</a>";
 }
+
 ?>
