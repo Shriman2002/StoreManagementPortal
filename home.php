@@ -50,28 +50,15 @@ if (isset($_GET['code'])) {
   <!-- <link rel="stylesheet" href="custom.css" />  -->
        
 </head>
+<style>
+  <?php include "styles.css" ?>
+</style>
 
 <body>
 <div class="container">
   <h1>Store Database Menu</h1>  
 
-  <a href="users-db.php">Click to view the Users database</a> <br>
-  <a href="product-db.php">Click to view the Product database</a><br>
-  <a href="store-db.php">Click to view the Store database</a><br>
-  <a href="manufacturer-db.php">Click to view the Manufacturer database</a><br>
-  <a href="transactions-db.php">Click to view the Transactions database</a><br>
-  <a href="instore_transactions-db.php">Click to view the Instore Transactions database</a><br>
-  <a href="online_transactions-db.php">Click to view the Online Transactions database</a><br>
-  <a href="delivery_costs-db.php">Click to view the Delivery Costs database</a><br>
-  <a href="sells-db.php">Click to view each Store's Inventory database</a><br>
-  <a href="makes-db.php">Click to view each Manufacturer's product database</a><br>
-  <a href="buys_from-db.php">Click to view which store each Manufacturer buys from</a><br>
-
-
-
-
-
-
+  <a href='/'><button style="background-color:lightblue">Login Page</button></a>
 
   <!-- CDN for JS bootstrap -->
   <!-- you may also use JS bootstrap to make the page dynamic -->
@@ -80,6 +67,101 @@ if (isset($_GET['code'])) {
   <!-- for local -->
   <!-- <script src="your-js-file.js"></script> -->  
   
-</div>    
+</div> 
+
+
+<div class="cards">
+
+  <div class="card">
+    <div class="card-body">
+      <p>
+        <a style="text-decoration:none" href="users-db.php">Click to view the Users database</a>
+      </p>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="card-body">
+      <p>
+        <a style="text-decoration:none" href="product-db.php">Click to view the Product database</a>
+      </p>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="card-body">
+      <p>
+        <a style="text-decoration:none" href="store-db.php">Click to view the Store database</a>
+      </p>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="card-body">
+      <p>
+        <a style="text-decoration:none" href="manufacturer-db.php">Click to view the Manufacturer database</a>
+      </p>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="card-body">
+      <p>
+        <a style="text-decoration:none" href="transactions-db.php">Click to view the Transactions database</a>
+      </p>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="card-body">
+      <p>
+        <a style="text-decoration:none" href="instore_transactions-db.php">Click to view the Instore database</a>
+      </p>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="card-body">
+      <p>
+        <a style="text-decoration:none" href="online_transactions-db.php">Click to view the Online Transactions database</a>
+      </p>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="card-body">
+      <p>
+        <a style="text-decoration:none" href="delivery_costs-db.php">Click to view the Delivery Costs database</a>
+      </p>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="card-body">
+      <p>
+        <a style="text-decoration:none" href="sells-db.php">Click to view each Store's inventory database</a>
+      </p>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="card-body">
+      <p>
+        <a style="text-decoration:none" href="makes-db.php">Click to view each Manufacturer's product database</a>
+      </p>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="card-body">
+      <p>
+        <a style="text-decoration:none" href="buys_from-db.php">Click to view which store each Manufacturer buys from</a>
+      </p>
+    </div>
+  </div>
+
+<div>
+
+
 </body>
 </html>  

@@ -28,3 +28,54 @@
     height: 100%;
     background: linear-gradient(0deg, #5adef7 0%, #0090d6 100%);
   }
+  .cards {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    margin: 10px auto 0;
+    width: calc(280px * 4);
+  }
+  
+  .card {
+    box-shadow: 0 3px 10px 0 #aaa;
+    padding: 60px;
+    cursor: pointer;
+    height: 300px;
+    position: relative;
+    width: 300px;
+    background-color: lightskyblue;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    margin-right: 30px;
+    margin-left: 30px;
+    font-size: 22px;
+   
+  }
+  
+  .card h2 {
+    font-size: 50px;
+    font-weight: bold;
+  }
+  
+  .card.visited {
+    box-shadow: 0 3px 10px 2px #444;
+  }
+  
+  @media (max-width: 1100px) {
+    .cards {
+      grid-template-columns: 1fr 1fr;
+      width: calc(280px * 2);
+    }
+    .card {
+      margin: 0 auto 2rem;
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .cards {
+      display: block;
+      width: 100vw;
+    }
+    .card {
+      margin: 0 auto 2rem;
+    }
+  }

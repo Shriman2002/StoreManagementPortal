@@ -34,7 +34,9 @@ if (isset($_GET['code'])) {
         $_SESSION['loggedIn'] = true;
     }
 } else {
-    echo "<a href='" . $client->createAuthUrl() . "'>Login with Google</a>";
+    echo "<a href='" . $client->createAuthUrl() . "'><button style='background-color:lightblue; margin:10px' >Login with Google</button></a>";
+    echo "<a href='home.php'><button style='background-color:lightblue; margin:10px'>Visit the home page</button></a>";
+    echo "<h4>You must be logged in and authenticated to edit the databases!</h4> ";
 }
 
 ?>

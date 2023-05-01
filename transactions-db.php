@@ -38,6 +38,8 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST')
 </head>
 <body>
 <div class="container">
+    <a href='home.php'><button style='background-color:lightblue; margin:10px'>Home page</button></a>
+
   <h1>Transactions Database</h1>
   <form name="mainForm" action="transactions-db.php" method="post">  
         <div class="row mb-3 mx-3">

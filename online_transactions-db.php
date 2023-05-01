@@ -40,6 +40,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST')
 
 <body>
 <div class="container">
+    <a href='home.php'><button style='background-color:lightblue; margin:10px'>Home page</button></a>
 
   <h1>Online Transactions Database</h1>
   <form name="mainForm" action="online_transactions-db.php" method="post">  

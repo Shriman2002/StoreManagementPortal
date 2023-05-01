@@ -43,6 +43,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST'){
 
 <body>
 <div class="container">
+  <a href='home.php'><button style='background-color:lightblue; margin:10px'>Home page</button></a>
 
   <h1>Users Database</h1>
   <form name="mainForm" action="users-db.php" method="post">  
